@@ -9,19 +9,24 @@ int main(){
     }
 
     int max = arr[0];
-    int max2;
-    int a;
+    int max2 = arr[1];
+    int count = 0;
     for(int i=0; i<10; i++){
-        if(arr[i]>max){
-            int temp = max;
-            max = arr[i];
-            max2 = temp;
-            a = i;
+        if(arr[i]>max || arr[i]>max2){
+            if(arr[i] > max){
+                int temp = max;
+                max = arr[i];
+                max2 = temp;
+            }
+            count++;
+        }
+        if(count==0 && max2<arr[i] && arr[i]!=max){
+            max2 = arr[i];
         }
     }
     
-    cout<< max << " ";
-    cout<< max2;
+    cout<< "Largest no: " <<max << "\n";
+    cout<< "Second largest no: " <<max2;
 
     return 0;
 }
