@@ -13,7 +13,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
         struct ListNode *ptr = START;
         if(l1){
             num1 = l1->val;
-            l1 = l1->next;
+            l1 = l1->next; 
         }
         else{
             num1 = 0;
